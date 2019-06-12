@@ -25,11 +25,16 @@ defmodule Budgeting.Directory do
   def list_transactions(params) do
     limit = String.to_integer(params["count"])
     offset = (String.to_integer(params["page"]) - 1) * limit
+    offset = if offset < 0 do
+      0
+    else
+      offset
+    end
     query = from(t in Transaction, select: t)
       |> limit(^limit) 
       |> offset(^offset)
     query =
-      if is_binary(params["sortOrder"]) && is_binary(params["sortField"]) do
+      if is_binary(params["sortOrder"]) and is_binary(params["sortField"]) do
         direction = String.to_atom(params["sortOrder"])
         sort_field = String.to_atom(params["sortField"])
         query 

@@ -75,7 +75,7 @@ export default class Budget extends React.Component<any> {
 
   buildQueryParams = (): string => {
     const params: any = {
-      page: this.state.pageNumber,
+      page: this.state.pageNumber || 1,
       count: this.state.count,
       sortOrder: this.state.sortOrder,
       sortField: this.state.sortField,
@@ -148,10 +148,15 @@ export default class Budget extends React.Component<any> {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        ...rest,
-        date: moment(date).format('YYYY-MM-DD'),
+        transaction: {
+          ...rest,
+          date: moment(date).format('YYYY-MM-DD'),
+        },
       }),
-    }).then(this.getTransactions);
+    }).then(() => {
+      this.getTransactions();
+      this.handleClose();
+    });
   };
 
   uploadFile = (e: React.FormEvent<any>): void => {

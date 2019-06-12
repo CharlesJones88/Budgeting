@@ -22,8 +22,8 @@ defmodule BudgetingWeb.TransactionController do
   end
 
   def create(conn, %{"transaction" => transaction_params}) do
-    if path = transaction_params.path do
-      File.stream!(path) 
+    if Map.has_key?(transaction_params, "path") do
+      File.stream!(transaction_params.path) 
       |> CSV.decode!
       |> Stream.drop(1)
       |> Enum.map(fn

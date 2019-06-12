@@ -1,0 +1,13 @@
+2019-06-12 11:04:43.501 CDT [7503] LOG:  listening on IPv6 address "::1", port 5432
+2019-06-12 11:04:43.501 CDT [7503] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2019-06-12 11:04:43.502 CDT [7503] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2019-06-12 11:04:43.523 CDT [7504] LOG:  database system was shut down at 2019-06-11 18:45:52 CDT
+2019-06-12 11:04:43.529 CDT [7503] LOG:  database system is ready to accept connections
+2019-06-12 11:05:14.752 CDT [7551] ERROR:  OFFSET must not be negative
+2019-06-12 11:05:14.752 CDT [7551] STATEMENT:  SELECT t0."id", t0."amount", t0."category", t0."date", t0."description", t0."inserted_at", t0."updated_at" FROM "transactions" AS t0 ORDER BY t0."date" DESC LIMIT $1 OFFSET $2
+2019-06-12 11:05:31.639 CDT [7550] ERROR:  OFFSET must not be negative
+2019-06-12 11:05:31.639 CDT [7550] STATEMENT:  SELECT t0."id", t0."amount", t0."category", t0."date", t0."description", t0."inserted_at", t0."updated_at" FROM "transactions" AS t0 ORDER BY t0."date" DESC LIMIT $1 OFFSET $2
+2019-06-12 11:05:41.908 CDT [7551] ERROR:  OFFSET must not be negative
+2019-06-12 11:05:41.908 CDT [7551] STATEMENT:  SELECT t0."id", t0."amount", t0."category", t0."date", t0."description", t0."inserted_at", t0."updated_at" FROM "transactions" AS t0 ORDER BY t0."date" DESC LIMIT $1 OFFSET $2
+2019-06-12 11:07:12.024 CDT [7554] ERROR:  OFFSET must not be negative
+2019-06-12 11:07:12.024 CDT [7554] STATEMENT:  SELECT t0."id", t0."amount", t0."category", t0."date", t0."description", t0."inserted_at", t0."updated_at" FROM "transactions" AS t0 ORDER BY t0."date" DESC LIMIT $1 OFFSET $2

@@ -85,7 +85,7 @@ export const TransactionList = ({
   const handleTableChange = function(type: string, source: any) {
     switch (type) {
       case 'pagination':
-        setPage(source.page);
+        setPage(source.page || 1);
         setSizePerPage(source.sizePerPage);
         break;
       case 'sort':
