@@ -22,7 +22,7 @@ defmodule BudgetingWeb.TransactionController do
   end
 
   def create(conn, %{"transaction" => transaction_params}) do
-    if Map.has_key?(transaction_params, "path") do
+    if Map.has_key?(transaction_params, :__struct__) do
       File.stream!(transaction_params.path) 
       |> CSV.decode!
       |> Stream.drop(1)
