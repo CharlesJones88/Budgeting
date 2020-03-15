@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@amcharts/amcharts4": "^4.4.10",
-    "acorn": "^6.1.1",
+    "acorn": "^6.4.1",
     "bootstrap": "^4.3.1",
     "create-react-class": "^15.6.3",
     "express": "^4.17.1",
