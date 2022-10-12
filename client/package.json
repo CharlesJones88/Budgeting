@@ -27,7 +27,7 @@
     "webpack-hot-middleware": "^2.25.0"
   },
   "dependencies": {
-    "@amcharts/amcharts4": "^4.4.10",
+    "@amcharts/amcharts4": "^4.10.29",
     "acorn": "^6.1.1",
     "bootstrap": "^4.3.1",
     "create-react-class": "^15.6.3",
